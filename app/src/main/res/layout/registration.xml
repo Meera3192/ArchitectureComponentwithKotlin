@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    app:layout_constraintGuide_begin="@dimen/_20sdp"
+                                                    android:id="@+id/guideline2"/>
+
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="vertical"
+                                                    app:layout_constraintGuide_end="@dimen/_20sdp"
+                                                    android:id="@+id/guideline"/>
+
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:orientation="horizontal"
+                                                    app:layout_constraintGuide_begin="@dimen/_120sdp"
+                                                    android:id="@+id/guideline3"/>
+
+        <androidx.appcompat.widget.AppCompatImageView android:layout_width="@dimen/_100sdp"
+                                                      android:layout_height="@dimen/_100sdp"
+                                                      app:layout_constraintEnd_toStartOf="@+id/guideline"
+                                                      app:layout_constraintStart_toStartOf="@+id/guideline2"
+                                                      app:layout_constraintTop_toTopOf="parent"
+                                                      app:layout_constraintBottom_toTopOf="@+id/guideline3"
+                                                      android:id="@+id/appCompatImageView"
+                                                      android:src="@drawable/ic_launcher_background"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlFirstName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="First Name"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toTopOf="@+id/guideline3"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintEnd_toStartOf="@+id/guideline">
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtFirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlLastName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="Last Name"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tlFirstName"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtLastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="Address"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tlLastName"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlEmailId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="EmailID"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tlAddress"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="User Name"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tlEmailId"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlPassWord"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="Password"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tlUserName"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtPassWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tlCurrentLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:hint="Current Location"
+                app:errorEnabled="true"
+                app:layout_constraintTop_toBottomOf="@+id/tlPassWord"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCurrentLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+            />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registration"
+                app:layout_constraintTop_toBottomOf="@+id/tlCurrentLocation"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
